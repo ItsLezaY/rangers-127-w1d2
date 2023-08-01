@@ -1,0 +1,141 @@
+:root {
+    --color-red: #EA5454;
+    --color-lightblue: #44D3D2;
+    --color-yellow: #FCAE4A;
+    --color-darkblue: #549EF2;
+    --color-text: #4D4F62;
+    --fw-light: 300;
+    --fw-normal: 400;
+    --fw-bold: 600;
+    --fs-heading-1: 1.5rem;
+    --fs-heading-1: 20px;
+    --fs-body: 15px;
+    --fs-body-small: 13px; 
+
+    /* rem is based off of the users base dont size
+    by default on a brower -- 
+    1rem = 16px (ROOT ELEMENT - default size of the browser - font, margin, padding, etc)
+    1em = 16px (ELEMENT - text) */
+}
+
+/*  media tag - i want to apply these styles only if a specific condition is met
+    if the minimum size of the screen is >= I want my heading1 to be 2.25rem */
+
+@media (min-width: 768px) {
+    :root {
+        --fs-heading-1: 2.25rem;
+    }
+  }
+
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    color: var(--color-text);
+    background-color: #f2f2f2;
+  }
+
+
+  h1,h2 {
+    font-size: var(--fs-heading-1);
+    letter-spacing: 0.17px;
+  }
+
+
+  section {
+    padding: 85px 32px
+
+    }
+
+
+    section header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 4.75rem;
+    }
+
+
+  h1 {
+    font-weight: var(--fw-bold);
+    /* 1 em = the font size of this element */
+    margin-bottom: 1em;
+  }
+
+
+  h2 {
+    font-weight: var(--fw-light);
+    margin-bottom: .2em;
+  }
+
+  h1 + p {
+    text-align: center;
+    font-size: var(--fs-body);
+    letter-spacing: .1px;
+    line-height: 1.7;
+    max-width: 33.75rem;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  .card {
+    padding: 1.75rem;
+    background-color: #fff;
+    width: 100%;
+    max-width: 21.875rem;
+    min-height: 12.875rem;
+    border-width: 3.5px 0 0 0;
+    border-style: solid;
+    border-radius: 0.5rem;
+    box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.50);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card h3 {
+    font-size: var(--fs-heading-2);
+    margin-bottom: 0.2em;
+  }
+
+  .card p {
+    font-size: var(--fs-body-small);
+    line-height: 1.75;
+  }
+
+  .card img {
+    max-width: 3.5625rem;
+    height: auto;
+    align-self: flex-end;
+  }
+  #card-lightblue {
+    border-color: var(--color-lightblue);
+  }
+
+  #card-red {
+    border-color: var(--color-red);
+  }
+
+  #card-yellow {
+    border-color: var(--color-yellow);
+  }
+
+  #card-darkblue {
+    border-color: var(--color-darkblue);
+  }
+
+  @media (min-width: 1162px) {
+    #card-yellow {
+        order: 2;
+    }
+    #card-darkblue {
+        order: 1;
+        transform: translateY(50%);
+    }
+    #card-lightblue {
+        transform: translateY(50%);
+    }
+  }
