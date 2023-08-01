@@ -127,6 +127,11 @@ body {
     border-color: var(--color-darkblue);
   }
 
+  /* min-width --> this size and UP
+  max-width --> this size and DOWN
+  
+  you can combine min-width and max-width for BETWEEN effext*/
+  
   @media (min-width: 1162px) {
     #card-yellow {
         order: 2;
