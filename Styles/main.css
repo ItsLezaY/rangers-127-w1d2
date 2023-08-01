@@ -109,8 +109,9 @@ body {
   .card img {
     max-width: 3.5625rem;
     height: auto;
-    align-self: flex-end;
+    align-self: flex-end
   }
+  
   #card-lightblue {
     border-color: var(--color-lightblue);
   }
@@ -131,7 +132,7 @@ body {
   max-width --> this size and DOWN
   
   you can combine min-width and max-width for BETWEEN effext*/
-  
+
   @media (min-width: 1162px) {
     #card-yellow {
         order: 2;
