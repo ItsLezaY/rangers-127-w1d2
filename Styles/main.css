@@ -43,7 +43,7 @@ body {
 
 
   section {
-    padding: 85px 32px
+    padding: 85px 32px;
 
     }
 
@@ -109,9 +109,9 @@ body {
   .card img {
     max-width: 3.5625rem;
     height: auto;
-    align-self: flex-end
+    align-self: flex-end;
   }
-  
+
   #card-lightblue {
     border-color: var(--color-lightblue);
   }
